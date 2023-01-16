@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import LocationInfo from "./components/LocationInfo";
 import Logo from "./assets/logo.png";
 import CardResident from "./components/CardResident";
+import Footer from "./components/Footer";
 
 function App() {
   //? Obtenemos una locacion random
@@ -18,14 +19,15 @@ function App() {
     <div className="App">
       <Header />
       <div className="divImg">
-        <img src={Logo} alt="Logo de Rick & Morty" />
+        <img className="imgDiv" src={Logo} alt="Logo de Rick & Morty" />
       </div>
       <LocationInfo location={location} />
-      <div>
+      <div className="divCardContainer">
         {location?.residents.map((url) => (
           <CardResident key={url} url={url} />
         ))}
       </div>
+      <Footer />
     </div>
   );
 }

@@ -3,7 +3,7 @@ import '../components/style/header.css'
 
 function Header() {
   return (
-    <header className='header'>header</header>
+    <header className='header'></header>
   )
 }
 
